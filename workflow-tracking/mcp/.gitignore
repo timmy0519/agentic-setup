@@ -1,0 +1,8 @@
+# Runtime workflow state — live session data, not source
+.task-tool/
+# Python bytecode
+__pycache__/
+*.pyc
+# Test/build caches
+.pytest_cache/
+.venv/

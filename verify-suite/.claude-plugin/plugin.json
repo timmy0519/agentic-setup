@@ -1,0 +1,6 @@
+{
+  "name": "verify-suite",
+  "description": "Verification engine + durable rule-pack, the verify-* review skill family, and artifact-flow routing for spec/design/task/research-note quality gating.",
+  "version": "0.1.0",
+  "dependencies": ["adversarial-review"]
+}

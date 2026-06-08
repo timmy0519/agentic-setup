@@ -1,0 +1,5 @@
+{
+  "name": "adversarial-review",
+  "description": "Generative red-team (Mode-2) adversarial review of any artifact — extracts intent, runs grounded critic lenses, synthesizes a severity-rated advisory soft-gate report.",
+  "version": "0.1.0"
+}

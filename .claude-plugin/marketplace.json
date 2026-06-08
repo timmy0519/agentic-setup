@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "agentic-setup",
+  "version": "0.1.0",
+  "description": "Agentic-setup ecosystem: a verification engine + rule-pack, a generative adversarial-review red-team, and AC-oriented workflow/team progress tracking. Three composable, self-contained Claude Code plugins.",
+  "owner": {
+    "name": "timmy0519",
+    "email": "timmy0519@users.noreply.github.com"
+  },
+  "plugins": [
+    {
+      "name": "adversarial-review",
+      "source": "./adversarial-review",
+      "description": "Generative red-team (Mode-2) adversarial review of any artifact — extracts intent, runs grounded critic lenses (Skeptic/Architect/Minimalist), synthesizes a severity-rated advisory soft-gate report. Standalone, no plugin dependencies."
+    },
+    {
+      "name": "verify-suite",
+      "source": "./verify-suite",
+      "description": "Verification engine + durable acceptance-criteria rule-pack, the verify-* review-skill family, and artifact-flow routing for spec/design/task/research-note quality gating. Depends on adversarial-review for its Mode-2 generative pass."
+    },
+    {
+      "name": "workflow-tracking",
+      "source": "./workflow-tracking",
+      "description": "AC-oriented multi-step workflow & agent-team progress tracking: bundles the task-tool MCP, a workflow-tracking guidance skill, and an advisory advance-gate nudge hook. Standalone."
+    }
+  ]
+}

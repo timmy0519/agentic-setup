@@ -1,0 +1,50 @@
+requirements:
+  structural:
+  - requirements-format
+  quality:
+  - language-precision
+  - content-stays-in-layer
+  - edge-case-coverage
+  - make-implicit-explicit
+  - design-economy
+  - uncertainty-managed
+  - user-story-testability
+design:
+  domain: agentic
+  structural:
+  - design-format
+  quality:
+  - language-precision
+  - content-stays-in-layer
+  - edge-case-coverage
+  - make-implicit-explicit
+  - design-extensibility
+  - decisions-justified
+  - contract-evolution
+  - data-flow-consistency
+  - design-economy
+  - e2e-workflow-visibility
+  - requirements-coverage
+  - team-design-coherence
+  - delegation-justification
+  - producer-consumer-completeness
+task:
+  structural:
+  - task-format
+  quality:
+  - design-economy
+  - uncertainty-managed
+  - deferred-items-separation
+  - concrete-action-verbs
+  - requirements-verification-task
+  - requirements-coverage
+  - design-file-inventory-coverage
+  - design-flow-component-coverage
+skill:
+  structural:
+  - skill-format
+  quality:
+  - language-precision
+  - make-implicit-explicit
+  - edge-case-coverage
+  - producer-consumer-completeness

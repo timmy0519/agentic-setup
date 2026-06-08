@@ -1,0 +1,5 @@
+{
+  "name": "workflow-tracking",
+  "description": "AC-oriented multi-step workflow & agent-team progress tracking: bundles the task-tool MCP, a workflow-tracking guidance skill, and an advisory advance-gate nudge hook.",
+  "version": "0.1.0"
+}

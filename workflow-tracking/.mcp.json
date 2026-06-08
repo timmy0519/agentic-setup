@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "task-tool": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/mcp/run-server.sh"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Verify Rule Datapoints
+# Records false positives, false negatives, and inconsistencies from verify runs.
+# Entry point: /flag-imp (users never edit this file directly)
+#
+# Schema per datapoint:
+#   id: string (auto: dp-YYYYMMDD-NNN)
+#   timestamp: ISO-8601
+#   rule_id: string (which rule fired or should have)
+#   artifact_path: string
+#   artifact_type: string (requirements|design|task)
+#   verdict: PASS|FAIL|CONSIDER
+#   observation_type: false_positive|false_negative|inconsistency
+#   correction:  (required for FP and FN)
+#     what_actually_happened: string (1-2 sentences)
+#     principle_violated: string (general class, not specific miss)
+#     evidence_category: string (boundary_spec|input_coverage|scope_creep|ambiguity|...)
+#   reviewer: string (user|lead|peer-rule)
+#   notes: string (optional)
+
+datapoints: []
