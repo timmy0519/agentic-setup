@@ -14,7 +14,7 @@ A task-tool session is the parent workflow. It composes two separable aspects:
 - **Presenting aspect** (the default member, `meta_key="artifact-flow"`): WHEN/how the user reviews, and which gates persist to disk WITH their ACs even if the user never looks. This is the human-review surface.
 - **Powering aspect(s)** (added with `register_workflow` under distinct meta-keys): HOW the work gets done — explore/build/verify lanes.
 
-**The presenting aspect is MANDATORY** — every session must consciously declare how the user reviews. In order of preference: (1) read and apply the `/artifact-flow` skill (best practice — picks a presenting structure matched to the task class); (2) author your own workflow graph; (3) call `init` with no workflow graph to fall back to the built-in general-report skeleton (build → user-review gate → done), which returns a recommendation reminding you it was a fallback. Picking the minimal default is valid; picking it *silently* is the anti-pattern — the choice should be intentional and visible in the record. Powering aspects are optional and added only when a how-the-work-got-done lane is worth tracking separately.
+**The presenting aspect is MANDATORY** — every session must consciously declare how the user reviews. In order of preference: (1) read and apply the `/artifact-flow` skill (ships with the verify-suite plugin) — recommended, because the presenting aspect is a core concept and `/artifact-flow` picks a presenting structure matched to the task class; not required; (2) author your own workflow graph; (3) call `init` with no workflow graph to fall back to the built-in general-report skeleton (build → user-review gate → done), which returns a recommendation reminding you it was a fallback. Picking the minimal default is valid; picking it *silently* is the anti-pattern — the choice should be intentional and visible in the record. Powering aspects are optional and added only when a how-the-work-got-done lane is worth tracking separately.
 
 ### Routing: native list vs task-tool MCP
 
@@ -43,4 +43,4 @@ A task-tool session is the parent workflow. It composes two separable aspects:
 
 ### Soft coupling
 
-This skill works standalone. AC graduation references `/verify` rule names (verify-suite plugin) and origin routing aligns with adversarial-review's lenses — those plugins sharpen the review lens but are not required for tracking to function.
+This skill works standalone. AC graduation references `/verify` rule names (verify-suite plugin) and origin routing aligns with adversarial-review's lenses — those plugins sharpen the review lens but are not required for tracking to function. The `/artifact-flow` skill (also in verify-suite) is the recommended way to author the presenting aspect; without it, `init`'s built-in general-report fallback keeps presenting functional.

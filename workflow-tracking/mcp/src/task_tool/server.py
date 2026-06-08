@@ -78,8 +78,10 @@ def init(
 
     The PRESENTING aspect is MANDATORY — every session must declare how the user
     reviews. You have three ways, in order of preference:
-      1. Read and apply the /artifact-flow skill — best practice, picks a
-         presenting structure matched to your task class. PREFERRED.
+      1. Read and apply the /artifact-flow skill (ships with the verify-suite
+         plugin) — RECOMMENDED, because the presenting aspect is a core concept
+         and /artifact-flow picks a structure matched to your task class. Not
+         required: option 3 keeps workflow-tracking usable standalone.
       2. Author your own workflow_yaml (the design guide below).
       3. Omit workflow_yaml entirely — the tool falls back to a built-in
          general-report skeleton (build -> user-review gate -> done) and returns
@@ -304,7 +306,9 @@ def init(
                 "HOW the user reviews this work — this default is a fallback, not a "
                 "choice. For a presenting structure matched to your task class (which "
                 "gates the user reviews, which persist with ACs even unreviewed), read "
-                "and apply the /artifact-flow skill, or pass your own workflow_yaml. "
+                "and apply the /artifact-flow skill (ships with the verify-suite "
+                "plugin — recommended because the presenting aspect is a core "
+                "concept, not required), or pass your own workflow_yaml. "
                 "Record gates with ACs so review points stay visible and resumable."
             )
         else:
